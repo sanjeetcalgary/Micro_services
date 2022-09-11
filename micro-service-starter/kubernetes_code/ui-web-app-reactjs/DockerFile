@@ -1,0 +1,11 @@
+FROM node:alpine
+WORKDIR /app
+# the above step will create a directory in target
+# first dot means source folder ande second dot represents workdir
+COPY . . 
+# get the build instrtuction from dev
+RUN npm install
+EXPOSE 8080
+# to run we use CMD instruction in dfile
+CMD ["npm","start"]
+

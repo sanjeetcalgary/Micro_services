@@ -1,0 +1,7 @@
+FROM python:3
+WORKDIR /app
+COPY . .
+# in case of python we have install used modules like flask and flask_cors given in index.py
+RUN pip install flask flask_cors
+EXPOSE 5000
+CMD ["pyton","index.py"]
